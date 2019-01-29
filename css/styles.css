@@ -10,7 +10,7 @@ html {
 body {
 	max-width: 800px;
 	margin: 0 auto;
-	padding: 25px 0 6rem 80px;
+	padding: 25px 20px 6rem 80px;
 	font-family: 'IBM Plex Mono', monospace;
 }
 
@@ -52,19 +52,28 @@ h1 {
 	z-index: -1;
 	font-size: 30vw;
 	text-align: right;
-	transform: translateX(-5vw) translateY(-7.5vh);
+	transform: translateX(-5vw) translateY(-2vh);
 	width: 110vw;
 	height: 315vh;
 	/*text-orientation: upright;*/
 	opacity: .25;
 	overflow: hidden;
 	letter-spacing: .05em;
-	line-height: 1.2;
+	line-height: 1;
 
 	background-image: linear-gradient(to bottom right, var(--purple), var(--green));
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
+
+@media (min-width: 600px) {
+	h1 {
+		transform: translateX(-5vw) translateY(-7.5vh);
+		line-height: 1.2;
+	}
+}
+
+
 
 h2 {
 	display: inline-block;
@@ -83,6 +92,10 @@ h3 {
 
 p,li {
 	line-height: 1.5;
+}
+
+ul {
+	padding-left: 20px;
 }
 
 h3 + p, h3 + .week {
@@ -113,11 +126,19 @@ tr {
 }
 
 td {
+	padding-right: 10px;
 	padding-bottom: .5rem;
+	vertical-align: top;
 }
 
 td:first-child, td:nth-child(2) {
-	width: 12.5%;
+	width: 20%;
+}
+
+@media (min-width: 600px) {
+	td:first-child, td:nth-child(2) {
+		width: 12.5%;
+	}
 }
 
 /* Nav */
