@@ -129,7 +129,15 @@ td:first-child, td:nth-child(2) {
 	left: 20px;
 	top: 25px;
 	background-color: black;
+	background-image: url(../svg/hamburger.svg);
+	background-size: contain;
 	/*border-radius: 4px;*/
+	-webkit-text-fill-color: transparent;
+
+}
+
+#menu-button.close {
+	background-image: url(../svg/close.svg);
 }
 
 nav {
@@ -169,4 +177,34 @@ nav a {
 
 nav a:visited {
 	color: var(--light-gray);
+}
+
+@media print {
+
+	body {
+		padding: 0;
+		font-size: 12px;
+	}
+	#menu-button, #main-nav {
+		display: none;
+	}
+	h2 {
+		padding: 0;
+	}
+	h1 {
+		z-index: -1;
+		text-align: left;
+		position: relative;
+		top: auto;
+		left: auto;
+		font-size: 3rem;
+		height: auto;
+		width: auto;
+		color: black;
+		background-image: none;
+		transform: none;
+		opacity: 1.0;
+		-webkit-background-clip: none;
+		-webkit-text-fill-color: black;
+	}
 }
