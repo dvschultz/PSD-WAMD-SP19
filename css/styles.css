@@ -90,6 +90,18 @@ h3 {
 	font-size: 1rem;
 }
 
+#schedule h3 {
+	color: var(--purple);
+	font-size: 1.5rem;
+	text-transform: uppercase;
+	letter-spacing: .08em;
+}
+
+#schedule h3 span {
+	font-size: 1rem;
+	color: black;
+}
+
 p,li {
 	line-height: 1.5;
 }
@@ -104,7 +116,6 @@ h3 + p, h3 + .week {
 
 h3 span {
 	font-weight: 400;
-	font-style: italic;
 }
 
 a {
