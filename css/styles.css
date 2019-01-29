@@ -52,13 +52,14 @@ h1 {
 	z-index: -1;
 	font-size: 30vw;
 	text-align: right;
-	transform: translateX(-10vw) translateY(-5vh);
+	transform: translateX(-5vw) translateY(-7.5vh);
 	width: 110vw;
-	height: 115vh;
+	height: 315vh;
 	/*text-orientation: upright;*/
 	opacity: .25;
 	overflow: visible;
-	letter-spacing: .08em;
+	letter-spacing: .05em;
+	line-height: 1.2;
 
 	background-image: linear-gradient(to bottom right, var(--purple), var(--green));
 	-webkit-background-clip: text;
@@ -82,8 +83,13 @@ p,li {
 	line-height: 1.5;
 }
 
-h3 + p {
+h3 + p, h3 + .week {
 	margin-top: 0;
+}
+
+h3 span {
+	font-weight: 400;
+	font-style: italic;
 }
 
 a {
