@@ -61,7 +61,7 @@ h1 {
 	letter-spacing: .05em;
 	line-height: 1;
 
-	background-image: linear-gradient(to bottom right, var(--purple), var(--green));
+	background-image: linear-gradient(to bottom right, var(--green), var(--purple));
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
