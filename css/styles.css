@@ -45,7 +45,7 @@ h1.ignore {
 }
 
 h1 {
-	position: absolute;
+	position: fixed;
 	left: 0;
 	top: 0;
 	margin: 0;
@@ -57,7 +57,7 @@ h1 {
 	height: 315vh;
 	/*text-orientation: upright;*/
 	opacity: .25;
-	overflow: visible;
+	overflow: hidden;
 	letter-spacing: .05em;
 	line-height: 1.2;
 
