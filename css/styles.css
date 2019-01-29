@@ -1,6 +1,164 @@
+:root { 
+	--light-gray: rgb(240,240,240); 
+	--blue: #0066FF;
+	--purple: #6600FF;
+	--green: #33CC99;
+} 
 html {
-	background-color: rgb(230,230,230);
+	background-color: var(--light-gray);
 }
 body {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 25px 0 6rem 80px;
+	font-family: 'IBM Plex Mono', monospace;
+}
 
+h1,h2 {
+	font-family: 'Astloch', cursive;
+	font-weight: 400;
+	font-size: 3rem;
+}
+
+h1.ignore {
+	position: fixed;
+	left: 0;
+	top: 0;
+	margin: 0;
+	z-index: -1;
+	font-size: 5vh;
+	/*opacity: .25;*/
+	writing-mode: vertical-lr;
+	text-align: center;
+	/*transform: translateX(-50%);*/
+	width: 100vw;
+	height: 100vh;
+	/*text-orientation: upright;*/
+	text-orientation: upright;
+	line-height: 1;
+	letter-spacing: -.3em;
+	overflow: visible;
+
+	background-image: linear-gradient(to bottom, var(--purple), var(--green));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+h1 {
+	position: absolute;
+	left: 0;
+	top: 0;
+	margin: 0;
+	z-index: -1;
+	font-size: 30vw;
+	text-align: right;
+	transform: translateX(-10vw) translateY(-5vh);
+	width: 110vw;
+	height: 115vh;
+	/*text-orientation: upright;*/
+	opacity: .25;
+	overflow: visible;
+	letter-spacing: .08em;
+
+	background-image: linear-gradient(to bottom right, var(--purple), var(--green));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+h2 {
+	display: inline-block;
+	background: black;
+	color: var(--light-gray);
+	padding: .25rem .5rem;
+	margin-top: 0;
+}
+
+h3 {
+	margin: 2em 0 0;
+	font-weight: 700;
+}
+
+p,li {
+	line-height: 1.5;
+}
+
+h3 + p {
+	margin-top: 0;
+}
+
+a {
+	color: var(--blue);
+}
+
+a:visited {
+	color: var(--purple);
+}
+
+a:hover {
+	color: black;
+	font-style: italic;
+}
+
+/* Table Styles */
+tr {
+	text-align: left;
+}
+
+td {
+	padding-bottom: .5rem;
+}
+
+td:first-child, td:nth-child(2) {
+	width: 12.5%;
+}
+
+/* Nav */
+#menu-button {
+	position: fixed;
+	z-index: 101;
+	height: 40px;
+	width: 40px;
+	left: 20px;
+	top: 25px;
+	background-color: black;
+	/*border-radius: 4px;*/
+}
+
+nav {
+	position: absolute;
+	z-index: 100;
+	height: 100vh;
+	width: 100vw;
+	left: 0;
+	top: 0;
+	box-sizing: border-box;
+	padding: 25px 50px 50px 80px;
+
+	background-image: linear-gradient(to bottom right, var(--purple), var(--green));
+
+	transition: transform 100ms;
+}
+
+nav.hidden {
+	transform: translateX(-100vw);
+}
+
+nav ul {
+	padding: 0;
+	margin: 0;
+}
+
+nav li {
+	padding: 0;
+	margin: 0 0 10px 0;
+	list-style: none;
+}
+
+nav a {
+	font-weight: 400;
+	color: var(--light-gray);
+}
+
+nav a:visited {
+	color: var(--light-gray);
 }
